@@ -1,2 +1,1 @@
-# MentalHealthTechIndustry
-The purpose of our project is to tackle this problem by evaluating data related to prevalence of mental health disorders in the IT workplace and generate a profile for adults most prone to depression. This will help understand the risk factors that contribute to mental health disorders. The insights can also help guide company policies regarding mental health resources to protect their employees in the workplace.
+# Mental Health
