@@ -25,13 +25,17 @@ for simpler analysis and interpretation: Categories 'Somewhat Easy', 'Very Easy'
 
 ## Exploratory Data Analysis
 **Correlation Matrix** An initial analysis to observe the correlation between the various columns of the data
-gave the following matrix
-![Correlation Matrix]()
+gave the following matrix:
+
+
+![Correlation Matrix](https://github.com/svellaichamy3/MentalHealthTechIndustry/blob/main/images/EDA1.PNG)
 
 We can see that “Diagnosed Medical condition Med Prof” is highly correlated to “Current Mental Illness”, “Past Mental Illness” and “Family History Mental Illness”. Other categorical variables like Gender, Country and Work style are not included because a numerical correlation cannot be calculated.
 To observe the effect between Current Mental Illness, Diagnosed Mental Illness
 and other categorical columns, bar graphs were generated as follows:
-![EDA2]()
+
+
+![EDA2](https://github.com/svellaichamy3/MentalHealthTechIndustry/blob/main/images/EDa2.PNG)
 
 - USA, UK and Australia are one of the top few countries with highest percentage of employees suffering
 from mental illness or seeking medical help. help.(Australia does however have very few data points and the
@@ -41,10 +45,16 @@ could mean that the LGBTQ community faces a greater risk for suffering from ment
 workplace.
 - There seems to be no significant effect of the work style (remote or not) on mental condition.
 
-![EDDA3]()
+
 Some other interesting graphs show the effect of society’s response to mental health
 discussions. It is seen clearly that when there is a negative response from coworkers or unsupportive
 response from the company, employees are more prone to having a mental illness
+
+
+![EDDA3](https://github.com/svellaichamy3/MentalHealthTechIndustry/blob/main/images/EDA3.PNG)
+
+
+
 ## Models
 
 ### Poisson Regression
@@ -71,27 +81,31 @@ coefficients against the response variable.
 ### Random Forest
 
 
-
-
-**Algorithm:** 
+_Algorithm:_
 Decision Trees and their extension Random
 Forests are robust and easy to interpret machine
 learning algorithms for both classification and
 regression tasks.
-**Analysis:**
-_**Variable Importance:**_ The chart shows us a list of
-variables in decreasing order of their predictive power
-towards the built Randomforest model
--
-_**Evaluation:**_ The Receiver Operating Characteristic
-( is a plot that can be used to determine the
-performance and robustness of a binary or multi class
-classifier. The x axis is the false positive rate (FPR) and
-the y axis is the true positive rate (TPR). This ensures we
-are taking into account the accuracies of both classes
-while classifying.
+
+_Analysis:_
+**Variable Importance:** The chart shows us a list of variables in decreasing order of their predictive power towards the built Randomforest model. **Evaluation** The Receiver Operating Characteristic is a plot that can be used to determine the performance and robustness of a binary or multi class classifier. The x axis is the false positive rate (FPR) and the y axis is the true positive rate (TPR). This ensures we are taking into account the accuracies of both classes while classifying.
+
 ## Results and Discussion
+* Poisson Regression: The expected number of mental illnesses in the U.S. is higher than the expected number of individuals in
+other countries outside of the top 5 countries with observations. The expected number of mental illnesses in Canada, Denmark, and the Netherlands are each lower
+than the expected number of countries outside of the top 5 countries with observations. The expected number of mental illnesses is higher when employees have a negative experience concerning mental health at their work. The expected number of people seeking treatment is greater in the United States than in other countries outside of the top 5 countries with observations. The expected number of those seeking treatment is greater when employer's provide coverage for mental health visits. 2.275 is the amount to add to the coverage coefficient to get the coefficient for individuals living in the U.S. Therefore, employer's providing coverage in the U.S. will have a multiplied effect on the number of people seeking treatment in the U.S.
+ 
+* Logistic Regression:
+
+* Random Forest:
+
+## Summary
+* The expected number of mental illnesses is statistically greater in the U.S. over other countries.
+* Employers offering benefits packages including mental health resources increases the number of employees seeking treatment.
+* An employee with a past mental illness has a significantly higher chance of a recurring illness.
+* Employers weighing mental health seriously have reduced the chances of depression among employees as compared to employers that do not take mental health seriously.
+* Employee's awareness on mental health benefits increases their chances of seeking treatment.
 
 ## Recommendation to Tech Cmpanies
-
-## Conclusion
+Employers discussion of mental health in the workplace and promoting a positive attitude about discussing mental health is very important, and its absence can lead to a
+greater presence of mental illnesses. Employers are highly recommended to offer their employees coverage for mental health visits, especially if the company is in the United States and if their employee has had a history of mental illness in the past
