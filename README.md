@@ -91,13 +91,71 @@ _Analysis:_
 **Variable Importance:** The chart shows us a list of variables in decreasing order of their predictive power towards the built Randomforest model. **Evaluation** The Receiver Operating Characteristic is a plot that can be used to determine the performance and robustness of a binary or multi class classifier. The x axis is the false positive rate (FPR) and the y axis is the true positive rate (TPR). This ensures we are taking into account the accuracies of both classes while classifying.
 
 ## Results and Discussion
-* Poisson Regression: The expected number of mental illnesses in the U.S. is higher than the expected number of individuals in
+
+### Poisson Regression: 
+The expected number of mental illnesses in the U.S. is higher than the expected number of individuals in
 other countries outside of the top 5 countries with observations. The expected number of mental illnesses in Canada, Denmark, and the Netherlands are each lower
 than the expected number of countries outside of the top 5 countries with observations. The expected number of mental illnesses is higher when employees have a negative experience concerning mental health at their work. The expected number of people seeking treatment is greater in the United States than in other countries outside of the top 5 countries with observations. The expected number of those seeking treatment is greater when employer's provide coverage for mental health visits. 2.275 is the amount to add to the coverage coefficient to get the coefficient for individuals living in the U.S. Therefore, employer's providing coverage in the U.S. will have a multiplied effect on the number of people seeking treatment in the U.S.
  
-* Logistic Regression:
+### Logistic Regression:
+"Current Mental Illness" Vs Predictors
 
-* Random Forest:
+
+![Log1](https://github.com/svellaichamy3/MentalHealthTechIndustry/blob/main/images/Log1.PNG)
+Interpretation:
+- Previous employers that weighed mental health seriously reduced the odds of mental
+illness among employees as compared to employers that do not take mental health
+seriously.
+_Somewhat seriously weighed concerns : Reduced odds of illness by 0.350; Very seriously weighed concerns : Reduced odds of illness by 0.76_
+
+- Past Mental illness is significant in determining a person's current mental illness.
+_Employee without Past mental illness : Reduced odds of current illness by 0.24_
+
+
+- Age contributes to a person's mental illness._Person with higher age : Reduced odds of illness by 0.023_
+- Gender or family history has no effect on a person's mental illness.
+
+"Employees Seeking Treatment" Vs Predictors
+
+![Log2](https://github.com/svellaichamy3/MentalHealthTechIndustry/blob/main/images/Log2.PNG)
+Interpretation:
+- Employers that discuss mental illness with their employees increase the chances of
+employees seeking treatment for depression.
+ _Employer who discussed concerns : Increased odds of employee seeking treatment by 0.540_
+- Employees awareness on Mental health benefits increases chances of seeking treatment. _Employee aware of health benefits : Increased odds of seeking treatment by 0.742_
+- Past mental illness significantly impacts employees seeking treatment for depression. _Person with prior mental illness : Increases odds of seeking treatment by 0.853_
+
+### Random Forest:
+Problem Statement: To identify factors that increase the risk of Mental illness
+Dependent Variable: Respondents who currently having a
+mental illness or are diagnosed for a mental illness by a
+mental health professional.
+Predictor variables: We see different categories of
+predictors in the dataset:
+* Variables pertaining to current employers
+* Variables pertaining to previous employers
+* Variables pertaining to personal characteristics
+
+We initially build individual Randomforest models for each category letting us have a closer look within the category.
+
+![RF1](https://github.com/svellaichamy3/MentalHealthTechIndustry/blob/main/images/RF1.PNG)
+
+In both cases of previous and current employers, employees who perceive that a discussion around mental health could causes negative consequence on Mental Health are more likely to be affected. 
+Employees with past mental illnesses are more susceptible to have a mental illness
+
+![RF2](https://github.com/svellaichamy3/MentalHealthTechIndustry/blob/main/images/RF2.PNG)
+
+The predictive model with the variables listed has an accuracy of ~87%
+
+We see that of all the factors, the 'Past Mental
+Illness' seems to be a very important factor
+meaning, this variable highly predicts the risk of
+an individual.
+
+The top subsequent factors are variables
+belonging to a mix of different categories and
+hence highlights the importance of all categories.
+
 
 ## Summary
 * The expected number of mental illnesses is statistically greater in the U.S. over other countries.
